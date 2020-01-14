@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "react-app"
+  ],
+  "plugins": [
+    "react-hooks",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "^16.8.4"
+    }
+  },
+  "rules": {
+    "prettier/prettier": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape":  true }
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true }
+    ]
+  },
+  "globals": {
+    "fixture": true,
+    "test": true,
+    "semi": false
+  }
+}

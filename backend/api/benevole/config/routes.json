@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/benevoles",
+      "handler": "benevole.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/benevoles/count",
+      "handler": "benevole.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/benevoles/:id",
+      "handler": "benevole.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/benevoles",
+      "handler": "benevole.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/benevoles/:id",
+      "handler": "benevole.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/benevoles/:id",
+      "handler": "benevole.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

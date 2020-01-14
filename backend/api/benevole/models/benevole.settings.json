@@ -1,0 +1,70 @@
+{
+  "info": {
+    "name": "Benevole"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "photographe",
+        "benevole",
+        "tresorier",
+        "secretaire",
+        "psychologue",
+        "sage_femme"
+      ]
+    },
+    "sexe": {
+      "type": "enumeration",
+      "enum": [
+        "homme",
+        "femme",
+        "autre"
+      ]
+    },
+    "nom": {
+      "type": "string"
+    },
+    "prenom": {
+      "type": "string"
+    },
+    "date_naissance": {
+      "type": "date"
+    },
+    "date_adhesion": {
+      "type": "date"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "etat_publi": {
+      "type": "enumeration",
+      "enum": [
+        "brouillon",
+        "public",
+        "archive"
+      ]
+    }
+  },
+  "connection": "default",
+  "collectionName": "benevoles"
+}

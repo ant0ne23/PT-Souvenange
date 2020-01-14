@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Temoignage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "etat_publi": {
+      "type": "enumeration",
+      "enum": [
+        "brouillon",
+        "public",
+        "archive"
+      ]
+    }
+  },
+  "connection": "default",
+  "collectionName": "temoignages"
+}

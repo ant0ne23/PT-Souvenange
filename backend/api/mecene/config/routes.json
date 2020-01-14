@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mecenes",
+      "handler": "mecene.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mecenes/count",
+      "handler": "mecene.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mecenes/:id",
+      "handler": "mecene.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mecenes",
+      "handler": "mecene.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mecenes/:id",
+      "handler": "mecene.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mecenes/:id",
+      "handler": "mecene.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

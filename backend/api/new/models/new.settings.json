@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "news",
+  "info": {
+    "name": "new"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titre": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "etat_publi": {
+      "type": "enumeration",
+      "enum": [
+        "brouillon",
+        "public",
+        "archive"
+      ]
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
