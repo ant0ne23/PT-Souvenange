@@ -9,7 +9,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const news =
+/*const news =
 [
   {
   
@@ -130,9 +130,9 @@ const news =
     "title" : "Témoignage d'une maman après l'intervention des bénévoles de l'association",
     "description" : "J’ai accouché à 32 SA par césarienne en mars dernier suite à une prééclampsie \n \n 10 jours après mon bébé est décédé. Ça a été très très dur pour moi, mon mari ainsi que notre entourage. \n Quelques mois après, j’ai entendu parler de Souvenange dans une émission télé, sans tarder j’ai envoyé un mail et j’ai obtenu une réponse très rapidement en m’expliquant la démarche à suivre pour envoyer mes photos. \n Merci à toute l’équipe de Souvenange pour ce que vous faites. \n Merci à Hélène pour votre réactivité et à Laurence pour ces retouches. \n Â la réception des photos j’en ai pleuré d’émotions…., elles sont démédicalisées et plus douce à voir. \n Mon mari et moi remercions toute l’équipe du fond du cœur. \n"
   }
- ]
+ ]*/
  
- app.get('/api/friends',(req,res) => 
+ app.get('/friends',(req,res) => 
  {
    res.send(friends.map(({id,lien,description,img}) => ({id,lien,description,img})))
  })

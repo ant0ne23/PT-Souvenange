@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "articles",
   "info": {
     "name": "article"
   },
@@ -22,9 +24,6 @@
       "plugin": "upload",
       "required": false
     },
-    "description": {
-      "type": "text"
-    },
     "lien": {
       "type": "string"
     },
@@ -35,8 +34,12 @@
         "public",
         "archive"
       ]
+    },
+    "auteur": {
+      "type": "string"
+    },
+    "contenu": {
+      "type": "richtext"
     }
-  },
-  "connection": "default",
-  "collectionName": "articles"
+  }
 }

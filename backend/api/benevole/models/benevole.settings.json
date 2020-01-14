@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "benevoles",
   "info": {
     "name": "Benevole"
   },
@@ -27,7 +29,10 @@
         "tresorier",
         "secretaire",
         "psychologue",
-        "sage_femme"
+        "sage_femme",
+        "president",
+        "webmaster",
+        "retoucheur"
       ]
     },
     "sexe": {
@@ -64,7 +69,5 @@
         "archive"
       ]
     }
-  },
-  "connection": "default",
-  "collectionName": "benevoles"
+  }
 }
