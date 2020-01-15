@@ -23,6 +23,7 @@ export const TrombinoscopeDetail = ({titre, photo, description, role, sexe, nom,
               <Grid container spacing={3} >
                     <Grid item xs>
                       <Paper className={classes.paper}> 
+                          <img className={classes.img} src={photo && photo.url}  alt="souvenange"/>
                           <div className={classes.contenu}>
                             <div><h1>{prenom} {nom}</h1>
                             <p>{description}</p></div> 
