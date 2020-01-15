@@ -8,7 +8,7 @@ import { useStyles } from './trombinoscope.style'
 import Grid from '@material-ui/core/Grid';
 
 
-export const Trombinoscope = ({personnes}) => {
+export const Trombinoscope = ({personnes, onClick }) => {
      console.log("personnes")
     const classes = useStyles();
 
@@ -16,26 +16,26 @@ export const Trombinoscope = ({personnes}) => {
      <Card className={classes.ensembleCard}>
    
           
-           {personnes.map(({id,nom,prenom,description,img}) => 
+           {personnes.map(({id,titre,role,photo}) => 
            { 
                 return ( 
-                    <div className={classes.root} key={id}>
+                    <div onClick={onClick(id)} className={classes.root} key={id}>
                          <Grid container spacing={3}>
                               <Grid item xs={12}>
-                                   <Card className={classes.card}>
+                                   <Card  className={classes.card}>
                                         <CardActionArea>
                                         <CardMedia className={classes.media}>
-                                        <img className={classes.img} src={img}  alt="souvenange"/>
+                                        <img className={classes.img} src={photo.url}  alt="souvenange"/>
                                         </CardMedia>
                                         <CardContent>
                                         <Typography gutterBottom variant="h5" component="h2">
                                         <div className={classes.contenuTexte}> 
-                                        {prenom} {nom} 
+                                        {titre}
                                         </div>    
                                         </Typography>
                                         <Typography variant="body2" color="textSecondary" component="p">
                                         <div className={classes.contenuTexte}> 
-                                             {description}
+                                             {role}
                                         </div> 
                                         </Typography>
                                         </CardContent>

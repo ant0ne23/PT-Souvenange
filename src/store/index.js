@@ -16,6 +16,7 @@ export const store = createStore(
       article : types.keyValue(),
       personnes : types.keyValue(),
       selectedNew : types.object(),
+      selectedPersonnes : types.object(),
     },
     ui: {},
   },

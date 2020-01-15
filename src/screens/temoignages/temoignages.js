@@ -20,14 +20,14 @@ export const Temoignages = ({ temoignages}) => {
           <h1>Témoignages</h1>
         </div>
         <div className={classes.ensemble}>
-        {temoignages.map(({id,description,title}) => {
+        {temoignages.map(({id,description,titre}) => {
           return(
           <div key={id}  > 
             <Grid>
                   <Grid item xs>
                     <Paper  className={classes.paper}>
                       <div onClick={toggle} alt="coeur" className={classes.titreTemoignage}><img src='/Coeur.png' className={classes.coeur}></img>
-                      <h1 className={classes.title}>{title}</h1></div>
+                      <h1 className={classes.title}>{titre}</h1></div>
                       <div className="toggle">
                         {state ? <p> </p> : <p>{description}</p>}
                       </div>

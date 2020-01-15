@@ -45,7 +45,7 @@ const login = ({ drivers, fb }) => {
 const logout = ({ drivers, fb }) => {
   const { window } = drivers
   fb.loginStatus.reset()
-  fb.status.reset()
+  fb.account.reset()
   fb.group.reset()
   window.FB.logout((response) => {
     fb.loginStatus.set(response)
@@ -64,7 +64,7 @@ const getUserInfo = ({ drivers, fb }) => {
     window.FB.api(`/${userId}/groups`, (response) => {
       if (response && response.data.length > 0) {
         const group = response.data.find(g => g.id === '784905061653719')
-        fb.group.set(group)
+        if (group) fb.group.set(group)
       }
     })
   }

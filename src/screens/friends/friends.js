@@ -19,14 +19,14 @@ export const Friends = ({ friends}) => {
       <h1>Associations amies</h1>
     </div>
       <div className={classes.ensemble}>
-          {friends.map(({id,lien,description,img}) => {
+          {friends.map(({id,lien,description,logo}) => {
             return(
 
             <div key={id}> 
               <Grid container spacing={3} >
                     <Grid item xs>
                       <Paper className={classes.paper}> 
-                          <img className={classes.img} href={lien} src={img}  alt="souvenange"/>
+                          <img className={classes.img} src={logo.url}  alt="souvenange"/>
                           <div className={classes.contenu}>
                             <div ><p className={classes.description} >{description}</p></div>  
                             <div className={classes.button}>

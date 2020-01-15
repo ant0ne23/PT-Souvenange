@@ -5,6 +5,5 @@ export const init = ({ payload }, _store, { http }) => {
 
 export const setFriends = ({ payload }, store) => {
   store.data.friends.set(payload)
-
 }
 

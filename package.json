@@ -57,5 +57,5 @@
     "eslint-plugin-react-hooks": "^2.1.2",
     "prettier": "^1.18.2"
   },
-  "proxy": "localhost:1337"
+  "proxy": "http://localhost:1337"
 }

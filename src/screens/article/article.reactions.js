@@ -1,6 +1,6 @@
 export const init = ({ payload }, _store, { http }) => {
     console.log('hodor')
-    http('GET_ARTICLE').get('/api/article')
+    http('GET_ARTICLE').get('/articles')
   }
   
   export const setArticle = ({ payload }, store) => {

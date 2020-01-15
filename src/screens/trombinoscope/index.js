@@ -4,14 +4,15 @@ import { inject, listen } from '@k-ramel/react'
 import { forRoute } from '@k-redux-router/react-k-ramel'
 import { listeners } from './trombinoscope.listeners'
 
-const storeToProps = (store) => {
+const storeToProps = (store, _props, { router }) => {
   return {
     personnes : store.data.personnes.getAsArray(),
+    onClick: id => () => router.push('TROMBINOSCOPE_DETAIL', { id: `${id}`})
   }
 }
 
 export const Trombinoscope = compose(
-  forRoute('TROMBINOSCOPE'),
+  forRoute.absolute('TROMBINOSCOPE'),
   inject(storeToProps),
   listen(listeners, 'TROMBINOSCOPE')
 )(Component)

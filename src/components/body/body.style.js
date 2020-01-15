@@ -17,16 +17,12 @@ export const useStyles = makeStyles(theme => ({
       '@global': {
         'a, a:visited, a:focus': {
           textDecoration: 'none',
-          marginLeft : '12px',
+          marginLeft : '15px',
           color : '#948EBA',
           fontWeight : 'bold',
         },
        
-       img : 
-       {
-         
-         height : theme.spacing(8),
-       },
+    
        
       },
     },
@@ -41,13 +37,19 @@ export const useStyles = makeStyles(theme => ({
   appBar: {
     
   },
+
+
   droit : 
-       {
-         marginLeft : '410px',
-       },
+  {
+    marginTop : '1%',
+    marginBottom : '0.5%',
+    marginLeft : '26%',
+  },
 
-  
-
+  logo : 
+  {
+    height: theme.spacing(7),
+  },
  
 
   content: {
@@ -55,4 +57,10 @@ export const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
   },
+
+  button : 
+  {
+    textTransform : 'none',
+  
+  }
 }))

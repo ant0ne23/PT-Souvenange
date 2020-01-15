@@ -16,19 +16,19 @@ export const Article = ({ article}) => {
       <h1>Articles</h1>
     </div>
       <div className={classes.ensemble}>
-          {article.map(({id,title,description,lien,img,logo}) => {
+          {article.map(({id, titre,contenu,lien,image,logo}) => {
             return(
             <div key={id}> 
               <Grid container spacing={3} >
                     <Grid item xs>
                       <Paper className={classes.paper}> 
-                          <img className={classes.img} src={img}  alt="souvenange"/>
+                          <img className={classes.img} src={image.url}  alt="souvenange"/>
                           <div className={classes.contenu}>
                           <div>
-                          <img className={classes.logo} src={logo}  alt="souvenange"/>
+                          <img className={classes.logo} src={logo.url}  alt="souvenange"/>
                           </div>
-                            <div><h1>{title}</h1> </div>
-                            <div ><p className={classes.description} >{description}</p></div>  
+                            <div><h1>{titre}</h1> </div>
+                            <div ><p className={classes.description} >{contenu}</p></div>  
                             <div className={classes.button}>
                               <Button href={lien} variant="contained" color="primary">Lire l'article</Button>
                             </div>

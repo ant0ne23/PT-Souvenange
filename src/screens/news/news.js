@@ -18,16 +18,16 @@ export const News = ({ news}) => {
       <h1>Actualités</h1>
     </div>
       <div className={classes.ensemble}>
-          {news.map(({id,title,description,date,img}) => {
+          {news.map(({id,titre,description,date,image}) => {
             return(
 
             <div key={id}> 
               <Grid container spacing={3} >
                     <Grid item xs>
                       <Paper className={classes.paper}> 
-                          <img className={classes.img} src={img}  alt="souvenange"/>
+                          <img className={classes.img} src={image.url}  alt="souvenange"/>
                           <div className={classes.contenu}>
-                            <div><h1>{title}</h1>
+                            <div><h1>{titre}</h1>
                             <h4>{date}</h4></div> 
                             <div ><p className={classes.description} >{description}</p></div>  
                           </div>

@@ -32,6 +32,15 @@ export const routes = {
       code : 'TROMBINOSCOPE'
     },
 
+    '/trombinoscope' : 
+    {
+      code : 'TROMBINOSCOPE',
+      '/:id':
+      {
+        code : 'TROMBINOSCOPE_DETAIL',
+      },
+    },
+
     '/CGU' : 
     {
       code : 'CGU'

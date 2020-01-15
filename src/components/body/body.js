@@ -22,14 +22,15 @@ import { Cgu } from 'screens/CGU'
 import { Presse } from 'screens/presse'
 import { Autres } from 'screens/autres' 
 import { Connexion } from 'screens/connexion'
-import { Trombinoscope } from 'screens/trombinoscope'  
+import { Trombinoscope } from 'screens/trombinoscope' 
+import { TrombinoscopeDetail } from 'screens/trombinoscope-detail' 
 import { useStyles } from './body.style'
 import MenuItem from '@material-ui/core/MenuItem'
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import Button from '@material-ui/core/Button'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
@@ -113,22 +114,23 @@ export const Body = () =>
     <div className={classes.container}>
       <AppBar position="static" className={classes.appBar}>
         <Link code="HOME">
-          <img src="/logo.svg" alt="logo" />
+          <img className={classes.logo} src="/logo.svg" alt="logo" />
         </Link>
         <Link code="CONNEXION" >
          <p>Connexion</p>
         </Link>
             <div className ={classes.test}>
               <div>
-              <p
+              <Button
                 ref={anchorRef}
                 aria-controls={open ? 'menu-list-grow' : undefined}
                 aria-haspopup="true"
                 onClick={handleToggle}
+                className ={classes.button}
                 >
                 <a> L'association</a>
 
-                 </p>
+                 </Button>
                 </div>
               
               <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
@@ -175,15 +177,16 @@ export const Body = () =>
         </Link>
         <div>
               <div>
-              <p
+              <Button
                 ref={anchorRef2}
                 aria-controls={open2 ? 'menu-list-grow' : undefined}
                 aria-haspopup="true"
                 onClick={handleToggle2}
+                className ={classes.button}
                 >
                 <a>Partenaires</a>
 
-                 </p>
+                 </Button>
                 </div>
               
               <Popper open={open2} anchorEl={anchorRef2.current} role={undefined} transition disablePortal>
@@ -216,7 +219,7 @@ export const Body = () =>
         <p>Nous contacter</p> 
         </Link>
         <div className={classes.droit}>
-        <img src="https://www.souvenange.fr/sites/all/themes/souvenange_materialize/images/ardig.png" alt="droit" />
+        <img src="/droit.png" alt="droit" />
         </div>
       </AppBar>
         
@@ -228,6 +231,7 @@ export const Body = () =>
         <Todo />
         <Connexion />
         <Trombinoscope />
+        <TrombinoscopeDetail />
         <News />
         <CarteBenevole />
         <CarteConvention />
@@ -266,6 +270,11 @@ const useStylesFooter = makeStyles(theme => ({
     backgroundColor:
     '#948EBA',
   },
+
+  texte : 
+  {
+    marginRight : '60%',
+  }
 }));
 
 function Copyright() {
@@ -273,7 +282,6 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary">
       <Link code="CGU">
       Conditions générale d'utilisation
-
       </Link>
     </Typography>
   );
@@ -286,10 +294,12 @@ export default function StickyFooter() {
     <div>
       <CssBaseline />
       <footer className={classes.footer}>
+      <div className={classes.texte}>
         <Container maxWidth="sm">
           <Typography variant="body1">Souvenange {' '}{new Date().getFullYear()}{'.'}</Typography> 
           <Copyright />
         </Container>
+       </div> 
       </footer>
     </div>
   );

@@ -77,6 +77,16 @@ export const routes = {
       code : 'TEMOIGNAGES'
     },
 
+    '/trombinoscope' : 
+    {
+      code : 'TROMBINOSCOPE',
+      '/:id':
+      {
+        code : 'TROMBINOSCOPE_DETAIL',
+      },
+    },
+
+
     '/parrain' : 
     {
       code : 'PARRAIN'
