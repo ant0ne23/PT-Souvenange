@@ -35,7 +35,7 @@
     "add": "^2.0.6",
     "k-ramel": "^2.1.0",
     "material-auto-rotating-carousel": "^3.0.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "path-to-regexp": "^3.1.0",
     "react": "^16.12.0",
     "react-awesome-slider": "^2.3.0",
