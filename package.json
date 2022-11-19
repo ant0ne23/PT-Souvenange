@@ -42,7 +42,7 @@
     "react-dom": "^16.10.2",
     "react-facebook-login": "^4.1.1",
     "react-google-maps": "^9.4.5",
-    "react-scripts": "3.2.0",
+    "react-scripts": "5.0.1",
     "react-swipeable-views": "^0.13.3",
     "react-toggle-component": "^3.0.8",
     "regenerator-runtime": "^0.13.3",
